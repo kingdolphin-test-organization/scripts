@@ -1,6 +1,6 @@
 {
   "name": "kingdolphin-test-scripts",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "test scripts",
   "main": "index.js",
   "repository": {
@@ -8,13 +8,21 @@
     "url": "git+https://github.com/kingdolphin-test-organization/scripts.git",
     "directory": "test-scripts"
   },
+  "files": [
+    "index.js"
+  ],
   "author": "KingDolphin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kingdolphin-test-organization/scripts/issues"
   },
   "homepage": "https://github.com/kingdolphin-test-organization/scripts#readme",
+  "dependencies": {
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "bin": "index.js"
 }
