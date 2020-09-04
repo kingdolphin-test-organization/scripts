@@ -1,0 +1,20 @@
+{
+  "name": "kingdolphin-test-scripts",
+  "version": "1.0.0",
+  "description": "test scripts",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingdolphin-test-organization/scripts.git",
+    "directory": "test-scripts"
+  },
+  "author": "KingDolphin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kingdolphin-test-organization/scripts/issues"
+  },
+  "homepage": "https://github.com/kingdolphin-test-organization/scripts#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
