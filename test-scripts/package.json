@@ -1,7 +1,9 @@
 {
   "name": "kingdolphin-test-scripts",
-  "version": "1.1.1",
+  "version": "1.1.13",
   "description": "test scripts",
+  "author": "KingDolphin",
+  "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,15 +13,15 @@
   "files": [
     "index.js"
   ],
-  "author": "KingDolphin",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kingdolphin-test-organization/scripts/issues"
   },
   "homepage": "https://github.com/kingdolphin-test-organization/scripts#readme",
   "dependencies": {
-    "jest": "^26.4.2",
-    "jest-cli": "^26.4.2",
+    "jest-cli": "24.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.4.3",
     "ts-jest": "^26.3.0"
   },
   "scripts": {
