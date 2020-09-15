@@ -25,6 +25,7 @@
     "ts-jest": "^26.3.0"
   },
   "scripts": {
+    "eject": "react-scripts eject",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": "index.js"
