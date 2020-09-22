@@ -1,6 +1,6 @@
 {
   "name": "kingdolphin-test-scripts",
-  "version": "1.1.18",
+  "version": "1.1.23",
   "description": "test scripts",
   "author": "KingDolphin",
   "license": "MIT",
@@ -11,7 +11,8 @@
     "directory": "test-scripts"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "config-overrides.js"
   ],
   "bugs": {
     "url": "https://github.com/kingdolphin-test-organization/scripts/issues"
@@ -20,13 +21,14 @@
   "dependencies": {
     "jest-cli": "24.9.0",
     "react": "^16.13.1",
+    "react-app-rewire-alias": "^0.1.6",
+    "react-app-rewired": "^2.1.6",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.4.3",
     "ts-jest": "^26.3.0"
   },
   "scripts": {
-    "eject": "react-scripts eject",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eject": "react-scripts eject"
   },
   "bin": "index.js"
 }

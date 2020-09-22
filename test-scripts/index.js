@@ -30,12 +30,14 @@ function start() {
     // look for and launch backend server
     // launch webpack dev server
     // watch code to rebuild
-    spawn("node_modules/.bin/react-scripts", ["start"], { stdio: "inherit" });
+    spawn("node_modules/.bin/react-app-rewired",
+          ["start", "--config-overrides", "node_modules/kingdolphin-test-scripts/config-overrides.js"],
+          { stdio: "inherit" });
 }
 
 function build() {
     // prod build
-    spawn("node_modules/.bin/react-scripts", ["build"], { stdio: "inherit" });
+    spawn("node_modules/.bin/react-app-rewired", ["build"], { stdio: "inherit" });
 }
 
 function create() {
