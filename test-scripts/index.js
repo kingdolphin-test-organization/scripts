@@ -4,6 +4,8 @@ const fs = require("fs");
 const {run} = require("jest-cli");
 const {exec, spawn} = require("child_process");
 
+const gatherPaths = require("./gatherPaths");
+
 if (process.argv.length < 3)
     throw new Error("Invalid number of parameters!");
 
@@ -30,9 +32,10 @@ function start() {
     // look for and launch backend server
     // launch webpack dev server
     // watch code to rebuild
-    spawn("node_modules/.bin/react-app-rewired",
-          ["start", "--config-overrides", "node_modules/kingdolphin-test-scripts/config-overrides.js"],
-          { stdio: "inherit" });
+    require("./scripts/start");
+    // spawn("node_modules/.bin/react-app-rewired",
+    //       ["start", "--config-overrides", "node_modules/kingdolphin-test-scripts/config-overrides.js"],
+    //       { stdio: "inherit" });
 }
 
 function build() {
@@ -67,18 +70,13 @@ function update() {
 }
 
 function test() {
-    let maps = {};
+    let maps = {}
 
-    const config = (fs.readFileSync(`${cwd}/tsconfig.paths.json`) || fs.readFileSync(`${cwd}/tsconfig.json`) || "{}")
-    const tsconfig = JSON.parse(config || "{}");
-    if (tsconfig["compilerOptions"] && tsconfig["compilerOptions"]["paths"]) {
-        const paths = tsconfig["compilerOptions"]["paths"];
-        Object.entries(paths).forEach(([name, [path]]) => {
-            name = name.replace("*", "(.*)$");
-            path = path.replace("*", "$1");
-            maps[name] = `<rootDir>/${path}.ts`;
-        });
-    }
+    Object.entries(gatherPaths()).forEach(([name, path]) => {
+        name = name.replace("*", "(.*)$");
+        path = path.replace("*", "$1");
+        maps[name] = path;
+    });
 
     run([
         "--collectCoverage", "false",
