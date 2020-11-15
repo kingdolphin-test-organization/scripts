@@ -1,3 +1,6 @@
+// CHECK OUT https://github.com/cilliemalan/react-from-scratch/blob/step-2/webpack.config.js
+// potential, simpler building system
+
 const webpack = require("webpack");
 const path = require("path");
 
